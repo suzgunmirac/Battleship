@@ -1,0 +1,18 @@
+import java.applet.*;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.text.NumberFormat;
+
+
+
+public class TankTroubleMain extends Applet //implements ActionListener
+{  
+   public void paint (Graphics g)
+   {
+     
+     
+     
+      g.drawString ("Arda Basaran", 25, 50);
+   }
+}
