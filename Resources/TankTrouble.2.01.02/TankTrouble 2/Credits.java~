@@ -1,0 +1,54 @@
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.awt.image.AffineTransformOp;
+import java.awt.image.*;
+import java.io.*;
+import javax.imageio.*;
+import java.awt.geom.*;
+import java.util.LinkedList;
+
+public class Credits extends Menu{
+   
+  public int originX;
+  public int originY;
+  
+ private BufferedImage background;
+ private BufferedImage button1;
+ private BufferedImage button2;
+ private BufferedImage creditsbutton;
+ private boolean condition1=false;
+ private boolean condition2=false;
+ private boolean condition3=false; //condition for credits
+  
+  public Credits(int x, int y,TankTrouble tanktrouble) throws ArrayIndexOutOfBoundsException
+  {
+
+        
+    originX = x;
+    originY = y;
+    
+    
+     try {
+    background = ImageIO.read(new File("gamebackground.png"));
+    button1 = ImageIO.read(new File("1player.png"));
+    button2 = ImageIO.read(new File("2player.png"));
+    creditsbutton = ImageIO.read (new File ("creditsbutton.png"));
+    
+     } catch (IOException e) {
+       System.out.println("ERROR: Icon Not Found");
+     }  
+   
+ 
+       
+   }
+
+   public void renderCredits(Graphics g)
+  {
+    Graphics2D g2 = (Graphics2D) g;
+    g2.drawImage(background,0,0,null);
+    
+    g2.setColor (Color.WHITE);
+    
+  }
+   
+}

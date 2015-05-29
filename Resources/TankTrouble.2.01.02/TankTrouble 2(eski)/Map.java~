@@ -1,0 +1,39 @@
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.awt.image.AffineTransformOp;
+import java.awt.image.*;
+import java.io.*;
+import javax.imageio.*;
+import java.awt.geom.Line2D;
+
+public class Map{
+  private int w = 700;
+  private int h = 700;
+  public int[][] map = new int[705][705];
+  public TankTrouble game;
+  private BufferedImage background;
+  public Map(TankTrouble tanktrouble)
+  {
+    try {
+    background = ImageIO.read(new File("gamebackground.png"));
+     } catch (IOException e) {
+       System.out.println("icon not found");
+     }
+   game = tanktrouble;
+  for(int i = 0; i<700; i++)
+  {
+    map[h][0]=1;
+    map[h][699]=1;
+    map[0][w]=1;
+    map[699][w]=1;
+    
+  }
+  }
+  public void renderMap(Graphics g)
+  {
+    Graphics2D g2 = (Graphics2D) g;
+    g.drawImage(background,0,0,null);
+    //g.drawLine(0,0,100,100);
+    
+  }
+}
