@@ -8,12 +8,14 @@ import java.awt.event.KeyListener;
 import java.applet.AudioClip;
 import java.applet.Applet;
 import java.util.Random;
-//runnable interface contains run () method  -> (interface kullaniminda gerekli)
-public class Main extends Canvas implements Runnable {
+
+
+
+public class Main extends JFrame{
   
-  public static final int WIDTH = 1300; // screen width
-  public static final int HEIGHT = 768; // screen height
-  public final String TITLE = "BattleShip";
+  public static final int WIDTH = 1200; // screen width
+  public static final int HEIGHT = 740; // screen height
+  public static final String TITLE = "BattleShip";
   
  
 
@@ -29,7 +31,7 @@ public class Main extends Canvas implements Runnable {
     
     game.setMinimumSize(new Dimension(WIDTH,HEIGHT)); 
     
-    JFrame frame = new JFrame(game.TITLE);
+    JFrame frame = new JFrame(TITLE);
     
     frame.add(game);
     frame.pack();

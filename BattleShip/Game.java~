@@ -1,8 +1,11 @@
 public class Game{
   
+  public Game()
+  {
+  }
+  
   private boolean isRunning = false;  //whether or not the program is running 
   public Thread thread; // For more info about threads: http://docs.oracle.com/javase/tutorial/essential/concurrency/sleep.html
-  
   public Menu menu;
   public Credits credits;
   public Map map;
@@ -12,9 +15,9 @@ public class Game{
   /**Enumerator to understand whether or not the game has started **/
   public enum STATE{
     MENU,
-      SETTINGS,
-      GAME,
-      CREDITS
+    SETTINGS,
+    GAME,
+    CREDITS
   };
   
   public STATE state = STATE.MENU; // state = MENU 
@@ -399,5 +402,10 @@ public class Game{
   {
     state = STATE.MENU;
   }
+  
+  public void setSettings(){
+    {
+     state = STATE.SETTINGS; 
+    }
   
 }
